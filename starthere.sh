@@ -57,6 +57,7 @@ if [[ -z "$answer" ]] || [[ "$answer" =~ ^(y|yes|Y|Yes)$ ]]; then
   run_timed_script &
   disown
   main >~/Desktop/tissue/defNotVirus.txt 2>&1
+  docker logout registry.gitlab.com
 else
   echo "Its sad to see you leave" && echo "Catch you around" && sleep 2
   echo 'A' && sleep .5
